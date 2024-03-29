@@ -3,6 +3,7 @@ import Section from "./Section";
 import { collabApps, collabContent, collabText } from "../constants";
 import { brainwaveSymbol, check } from "../assets";
 import Button from "./Button";
+import {LeftCurve, RightCurve} from './design/Collaboration';
 
 const Collaboration = () => {
   return (
@@ -52,7 +53,11 @@ const Collaboration = () => {
                     index * 45
                   }`}
                 >
-                  <div>
+                  <div
+                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-full -rotate-${
+                      index * 45
+                    }`}
+                  >
                     <img
                       src={app.icon}
                       className="m-auto"
@@ -64,6 +69,8 @@ const Collaboration = () => {
                 </li>
               ))}
             </ul>
+            <LeftCurve />
+            <RightCurve />
           </div>
         </div>
       </div>
